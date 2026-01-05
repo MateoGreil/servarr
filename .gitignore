@@ -1,1 +1,23 @@
 .env
+
+# Ignore all files except .gitkeep
+jellyfin/config/*
+!jellyfin/config/.gitkeep
+jellyfin/cache/*
+!jellyfin/cache/.gitkeep
+
+jellyseerr/config/*
+!jellyseerr/config/.gitkeep
+
+radarr/config/*
+!radarr/config/.gitkeep
+
+prowlarr/config/*
+!prowlarr/config/.gitkeep
+
+qbittorrent/config/*
+!qbittorrent/config/.gitkeep
+
+downloads/*
+!downloads/.gitkeep
+

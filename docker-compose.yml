@@ -21,7 +21,6 @@ services:
       #  read_only: true
     restart: 'unless-stopped'
     # Optional - alternative address used for autodiscovery
-    env_file: .env
     environment:
       - JELLYFIN_PublishedServerUrl=${JELLYFIN_PublishedServerUrl}
     # Optional - may be necessary for docker healthcheck to pass if running in host network mode
@@ -88,13 +87,12 @@ services:
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent
-    env_file: .env
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Paris
       - WEBUI_PORT=8080
-      - TORRENTING_PORT=#{TORRENTING_PORT}
+      - TORRENTING_PORT=${TORRENTING_PORT}
     volumes:
       - /home/media/servarr/qbittorrent/config:/config
       - /home/media/servarr/downloads:/downloads #optional
@@ -110,7 +108,6 @@ services:
       - NET_ADMIN
     devices:
       - /dev/net/tun:/dev/net/tun
-    env_file: .env
     environment:
       - VPN_SERVICE_PROVIDER=${VPN_SERVICE_PROVIDER}
       - VPN_TYPE=${VPN_TYPE}

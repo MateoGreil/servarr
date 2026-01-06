@@ -12,6 +12,9 @@ jellyseerr/config/*
 radarr/config/*
 !radarr/config/.gitkeep
 
+sonarr/config/*
+!sonarr/config/.gitkeep
+
 prowlarr/config/*
 !prowlarr/config/.gitkeep
 

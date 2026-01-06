@@ -98,8 +98,6 @@ services:
       - /home/media/servarr/downloads:/downloads #optional
     restart: unless-stopped
     network_mode: service:gluetun
-    depends_on:
-      - gluetun
 
   gluetun:
     image: qmcgaw/gluetun

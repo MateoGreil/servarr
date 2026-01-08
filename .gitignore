@@ -18,8 +18,8 @@ sonarr/config/*
 prowlarr/config/*
 !prowlarr/config/.gitkeep
 
-qbittorrent/config/*
-!qbittorrent/config/.gitkeep
+ariang/conf/*
+!ariang/conf/.gitkeep
 
 downloads/*
 !downloads/.gitkeep
